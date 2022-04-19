@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Обновление товара</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Обновление товара</h1>
+    <form method="post">
+        <input type="text" class="form-control" name="title" id="title" value="{{ prod.title }}" placeholder="Введите название товара"><br>
+        <input type="number" class="form-control" name="price" id="price" value="{{ prod.price }}" placeholder="Введите цену товара"><br>
+        <textarea type="text" class="form-control" name="text" id="text" placeholder="Введите описание товара">{{ prod.text }}</textarea><br>
+        <button class="btn btn-success" type="submit">Изменить товар</button>
+
+    </form>
+</div>
+
+{% endblock %}
